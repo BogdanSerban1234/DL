@@ -3,23 +3,64 @@
 	<head>
 		<title>Welcome to DL!</title>
 		<style>
-			body {
+			body, html {
+  				height: 100%;
+  				margin: 0;
+  				font-family: Arial, Helvetica, sans-serif;
+			}
+
+			* {
+  				box-sizing: border-box;
+			}			
+
+			.bg-image {
 				background-image: url('BGimage.jpg');
+
+  				
+  
+  
+  				filter: blur(8px);
+  
+  
+ 				height: 100%; 
+  
+ 
+  				background-position: center;
   				background-repeat: no-repeat;
-  				background-attachment: fixed;
   				background-size: cover;
+
+
+			}
+			.bg-text {
+				background-color: rgb(0,0,0); /* Fallback color */
+				background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+				font-weight: bold;
+				border: 3px solid #f1f1f1;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				z-index: 2;
+				width: 80%;
+				padding: 20px;
+				text-align: center;
 			}
 			#outline {
         		color: white;
         		text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 				cursor:help;
     		}
+			#blur {
+				filter:blur(8px)
+			}
 			body {
     			zoom: 1.5; /* 150% zoom */
 			}
 		</style>
 	</head>
 	<body align = "center">
+		<div class="bg-image"></div>
+		<div class="bg-text">
 		<p style = "color: rgb(35, 212, 11);" id = "outline">facut de Bogdan Serban</p>
 		<h2 style = "color: rgb(47, 189, 246);" id = "outline">Bun venit la DL! (Document and learn)</h2>
 		<table border = "0.1" bgcolor = "black" width = "400" align = "center">
@@ -46,8 +87,7 @@
 				<td width = "100">Cls 5-6 a</td>
 		</table>
 			</tr>
-		
-
+		</div>
 	</body>
 
 </html>
