@@ -94,6 +94,9 @@
 				font-size:xx-small;
 				rotate: 25deg;
 			}
+			.OneLine{
+				display:inline;
+			}
 			
 			body {
     			zoom: 1.70; /* 150% zoom */
@@ -140,12 +143,10 @@
 			<h2 style = "color:crimson" id = "outline" class = "blur">Trimite E-mail pentru cerere de a adauga o lectie:</h2>
 
 			<form action="mailto:asapioneer058@gmail.com" method="post" enctype="text/plain">
-			Name:<br>
-			<input type="text" name="name"><br>
-			E-mail:<br>
-			<input type="text" name="mail"><br>
-			Comment:<br>
-			<input type="text" name="comment" size="50"><br><br>
+			<div class = "OneLine">
+			<label style = "color:rgb(3, 222, 229)" id="outline">Anonim</label><br>
+			<input type="checkbox" name="Anonim" size="50"><br><br>
+			</div>
 			<input type="submit" value="Send" class="btn">
 			<input type="reset" value="Reset" class="btn">
 			</form>
