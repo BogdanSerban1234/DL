@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+        <title>Prepozitia</title>
+        <style>
+			body {
+    			zoom: 1.5; 
+                background-image: linear-gradient(to right,#1F2025, #36383d,#1F2025);
+                background-position: center;
+  				background-repeat:round;
+  				background-size: cover;
+                text-align: center;
+			}
+            #Black {
+                font-family: 'Inter', sans-serif; /* Quotes are important for external fonts */
+                font-weight: 500;                /* 400 is normal, 700 is bold */
+                color: black;
+                display: inline;
+                margin-left: 10px;
+            }
+            /* This targets the list items inside the list with id "Black" */
+            #Green {
+                color:rgb(17, 255, 0);
+                font-family: Arial, Helvetica, sans-serif;
+                position:static;
+                left:2px;
+                display: inline;
+            }
+            #Red{
+                color:rgb(255, 0, 0);
+                font-family: Arial, Helvetica, sans-serif;
+                position:static;
+                left:2px;
+                display: inline;
+            }
+            
+            .boxc {
+                width:80%;
+                height:fit-content;
+                background-color: rgb(245, 230, 248);
+                
+                border-radius:10px;
+                text-align: left;
+                margin: auto;
+                
+
+            }
+            .btn{
+                width:auto;
+                height: 31px;
+                
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 13px; 
+                font-weight: 700;
+                padding: 0.5em 1em;
+                color:rgb(255, 255, 255);
+                background-color: var(--clr-rgba); 
+                border: 10px solid var(--clr-accent); 
+                border-radius: 5px;
+                border: 0px;
+                padding: 0px;
+                transition: all 0.5s, rotate 1s, text-shadow 0.75s;
+                rotate: 0deg;
+                -webkit-text-stroke: 0.5px black;
+                
+            }
+            .btn:hover{
+                transform: translateY(-5px);
+                color: rgb(2, 164, 175);
+                font-size: 14px;
+                rotate: -10deg;
+                text-align: center;
+                text-shadow: -2.5px 0 6px #000000;
+                -webkit-text-stroke: 0.5px black;
+                
+            }
+            .scroll-box {
+                width: 100%;       /* Fill the screen width */
+                max-width: 100vw;  /* Don't go wider than the viewport */
+                overflow-x: auto;  /* Allow horizontal scroll */
+                overflow-y: auto;  /* Allow vertical scroll */
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                padding: 5px;
+                background-color: #f4f4f4;
+                /* Optional: add a smooth scroll feel on mobile */
+                -webkit-overflow-scrolling: touch; 
+            }
+            .problem-layout {
+                min-width: 200px;
+                display: flex;
+                justify-content: space-between;
+                gap: 10px;
+                border-top: 2px solid black;
+                padding-top: 10px;
+            }
+
+            .column {
+                flex: 1;
+                padding: 0 10px;
+            }
+
+            /* Vertical dividers to match your notebook lines */
+            .column:not(:last-child) {
+                border-right: 2px solid #2955a5; /* Blue lines like your notebook */
+            }
+
+            .math-block { margin-bottom: 15px; }
+		</style>
+        
+        <link rel="stylesheet" href="globalStandards.css">
+    </head>
+    <body style="font-family: 'Inter', sans-serif;">
+        <a href = "2-Index.html" class = "btn">Inapoi</a>
+        <h5 style = "color: rgb(255, 215, 155);">Facut de Bogdan Serban</h5>
+        <div class = "box" style = "margin: 5px;">
+            <p id = "Black">S-ar putea sa dam test ora viitoare (maine) așa că pun lecțiile aici</p>
+        </div>
+        <div class = "box" style = "margin: 5px;">
+            <p id = "Black"><b>Electrocinetica</b><br></p>
+            <p id = "Black"><b>1. Curentul electric</b> este <span id="Green">mișcarea ordonată</span> a purtătorilor de sarcină electrică (<i>electroni</i> și <i>ionii din electroliți</i>)<br><br>
+                El este produs de <span id="Green">Generatoare</span>, care transformă un anumit tip de energie în <span id = "green">Energie electrică</span><br>
+                 EX. <ul>
+                    <li>Baterii și acumulatoare (Energie chimică în electrică)</li>
+                    <li>Hidrocentrale și eoliene (Energie mecanică în electrică)</li>
+                </ul></p>
+            <p id = "Black"><b>2. Circuite electice</b><br><i>Elemente de circuit:</i><br>
+            <ol>
+                <li><span id="Green">Generator</span> (sursă, baterie <sub>[se notează cu o linie mai mare, plus și una mai mică, minus]</sub>)</li>
+                <li><span id="Green">Consumator</span> (bec <sub>[Cerc cu X]</sub>, motor electric<sub>[Cerc cu M]</sub>)</li>
+                <li><span id="Green">Firele conductoare</span> <sub>[Linie]</sub></li>
+                <li><span id="Green">Întrerupător deschis și închis</span> <sub>[Linie conectata/neconectata de 2 puncte]</sub></li>
+                <li><span id="Green">Aparate de măsură</span> (ampermetru și voltmetru) <sub>[Cerc cu A sau V]</sub></li>
+            </ol></p>
+            Circuitele pot fi:
+            <ul>
+                <li><span id="Green">serie</span> (EX. Becuri legate unul după altul)</li>
+                <li><span id="Green">paralel</span> (Ex. Becuri legate toate de același fir)</li>
+                <li><span id="Green">mixte</span> (combinație între ultimele două)</li>
+            </ul>
+        </div>
+        <div class = "box" style = "margin: 5px;">
+            <!-- Intensitatea curentului electric -->
+            <p id = "Black">De aici sunt mai multe definiții și formule.<br></p> 
+            <p id = "Black"><b><h3>Intensitatea curentului electric</h3></b>
+             - este mărimea fizică fundamentașă care măsoară <span id="Green">cantitatea de sarcină electrică</span> transportată <span id="Green">în unitatea de timp</span> prin <span id="Green">secțiunea unui conductor</span><br>
+            <b>Formule:</b><br>
+            \(I \) = \( \boldsymbol{\frac{Q}{\Delta t}} \) = <B>A (Amper)</B>
+            <br>
+            <b>Informații:</b><br>
+            Se măsoară cu un ampermetru (care se leagă în serie cu elementele de circuit)
+            <br>
+            <!-- Tensiunea electrică -->
+            <p id = "Black"><b><h3>Tensiunea electrică</h3></b>
+             - este raportul dintre <span id="Green">lucrul mecanic efectuat</span> pentru transportul sarcinilor electrice și <span id="Green">valoarea lor</span><br>
+             <br><b>E</b> - tensiunea electromotoare<br>
+             Reprezintă lucrul mecanic efectuat pentru transportul sarcinilor pe întregul circuit<br>
+             Se poate măsura dacă se pune un voltmetru la ambele borne ȘI se deschide circuitul (se oprește)
+             <br><br><b>u</b> - tensiunea interioară<br>
+             Reprezintă lucrul mecanic efectuat pentru transportul sarcinilor pe circuitul interior<br>
+             Se poate doar calcula
+             <br><br><b>U<sub>b</sub></b> - tensiunea la borne<br>
+             Reprezintă lucrul mecanic efectuat pentru transportul sarcinilor pe circuitul exterior<br>
+             Se poate măsura dacă se pune un voltmetru la ambele borne ȘI se închide circuitul (se pornește)
+            <br><b>Formule:</b><br>
+            \(U \) = \( \boldsymbol{\frac{L}{q}} \) = <B>V (Volt)</B><br>
+            \( {L}{tot} \) = \( {L}{int} \) + \( {L}{ext} \)<br>
+            \(\boldsymbol{\frac{L_{tot}}{q}} \) = \( \boldsymbol{\frac{L_{int}}{q} + \frac{L_{ext}}{q}} \)<br>
+            \(\boldsymbol{\frac{L_{tot}}{q}} \) = E (tensiunea electromotoare)<br>
+            \(\boldsymbol{\frac{L_{int}}{q}} \) = u (tensiunea interioară)<br>
+            \(\boldsymbol{\frac{L_{ext}}{q}} \) = U<sub>b</sub> (tensiunea la borne)
+
+            <br>
+            <b>Informații:</b><br>
+            Se măsoară cu un voltmetru
+
+            <br>
+            <!-- Rezistența electrică -->
+            <p id = "Black"><b><h3>Rezistența electrică</h3></b>
+             - este raportul dintre <span id="Green">tensiunea aplicată</span> la capetele unui conductor (consumator) și <span id="Green">intensitatea curentului </span>ce se stabilește prin el<br>
+             <br><b>Rezistivitate electrică - \(\rho \)  \(\boldsymbol{=} \Omega \cdot m \)</b><br>
+             E o constantă de material și se găsește în tabele<br>
+             <i>Ex.</i> Cu = 1,68 \(\cdot \) 10<sup>-8</sup>
+             <br><br><b>lungimea conductorului - \(l \boldsymbol{=} m\)</b>
+             <br><br><b>Aria secțiunii conductorului (Grosimea) - \(S \boldsymbol{=} m^2\)</b>
+            <br><br>
+            <b>Formule:</b><br>
+            \(R \) = \( \boldsymbol{\frac{U}{I}} \) = <B>\(\Omega \) (Ohm)</B><br>
+            \(R = \rho \cdot  \boldsymbol{\frac{l}{S}} \) \(\Leftrightarrow \) <br>\(\boldsymbol{\rho} = \boldsymbol{\frac{R \cdot S}{l}} \) = \(\Omega \cdot m \)<br>
+
+            <br>
+            <!-- <b>Informații:</b><br> -->
+            
+            <br>
+            PROBLEMA:
+            <div class="scroll-box">
+                <div class="problem-layout">
+                    <div class="column">
+                        <p>\( E = 24 \, V \)</p>
+                        <p>\( l = 20 \, m \)</p>
+                        <p>\( \rho = 1.7 \cdot 10^{-8} \)</p>
+                        <p>\( U_{b} = 8 \, V \)</p>
+                        <p>\( n = 38 \cdot 10^{19} \, e^- \)</p>
+                        <p>\( \Delta t = 10 \, s \)</p>
+                        <p>\( q_0 = 1.6 \cdot 10^{-19} \)</p>
+                        <hr>
+                        <p>\( I = ? \)</p>
+                        <p>\( R = ? \)</p>
+                        <p>\( S = ? \)</p>
+                        <p>\( u = ? \)</p>
+                    </div>
+
+                    <div class="column">
+                        <div class="math-block">\( I = \frac{Q}{\Delta t} \)</div>
+                        <div class="math-block">\( Q = n \cdot q_0 \)</div>
+                        <div class="math-block">\( Q = I \cdot \Delta t \)</div>
+                        <div class="math-block">\( R = \frac{u}{I} \)</div>
+                        <div class="math-block">\( R = \rho \cdot \frac{l}{S} \)</div>
+                        <div class="math-block">\( S = \rho \cdot \frac{l}{R} \)</div>
+                        <div class="math-block">\( u = E - U_{b} \)</div>
+                    </div>
+
+                    <div class="column">
+                        <div class="math-block">
+                            \( Q = 38 \cdot 10^{19} \cdot 1.6 \cdot 10^{-19} = \) <br>
+                            \( \boldsymbol{= 60.8 \, C} \)
+                        </div>
+                        <div class="math-block">
+                            \( I = \frac{60.8 \, C}{10 \, s} = \boldsymbol{6.08 \, A} \)
+                        </div>
+                        <div class="math-block">
+                            \( u = 24 \, V - 8 \, V = \boldsymbol{16 \, V} \)
+                        </div>
+                        <div class="math-block">
+                            \( R = \frac{8 \, V}{6.08 \, A} = \boldsymbol{1.31 \, \Omega} \)
+                        </div>
+                        <div class="math-block">
+                            \( S = \frac{1.7 \cdot 10^{-8} \cdot 20 \, m}{1.31 \, \Omega} = \) <br>
+                            \( \boldsymbol{= 25.95 \cdot 10^{-8} \, m^2} \)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            NOTĂ: La calculul pentru rezistența electrică \(R \), am folosit \(U_{b} \), pentru că aceasta este cea care măsoară tensiunea pentru circuitul exterior!
+            <br><br>
+            Noroc dacă dăm test!
+            
+        </div>
+    </body>
+</html>
